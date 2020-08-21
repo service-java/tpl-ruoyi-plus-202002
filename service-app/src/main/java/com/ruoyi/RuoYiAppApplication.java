@@ -8,7 +8,7 @@ import tk.mybatis.spring.annotation.MapperScan;
 
 /**
  * 启动程序
- * 
+ *
  * @author ruoyi
  */
 @SpringBootApplication(exclude = { DataSourceAutoConfiguration.class })

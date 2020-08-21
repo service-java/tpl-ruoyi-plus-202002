@@ -1,19 +1,22 @@
 package com.ruoyi.system.mapper;
 
 import com.ruoyi.system.domain.EventLog;
+import org.apache.ibatis.annotations.Mapper;
+
 import java.util.List;
 
 /**
  * 事件日志Mapper接口
- * 
+ *
  * @author ruoyi
  * @date 2019-12-30
  */
-public interface EventLogMapper 
+@Mapper
+public interface EventLogMapper
 {
     /**
      * 查询事件日志
-     * 
+     *
      * @param id 事件日志ID
      * @return 事件日志
      */
@@ -21,7 +24,7 @@ public interface EventLogMapper
 
     /**
      * 查询事件日志列表
-     * 
+     *
      * @param eventLog 事件日志
      * @return 事件日志集合
      */
@@ -29,7 +32,7 @@ public interface EventLogMapper
 
     /**
      * 新增事件日志
-     * 
+     *
      * @param eventLog 事件日志
      * @return 结果
      */
@@ -37,7 +40,7 @@ public interface EventLogMapper
 
     /**
      * 修改事件日志
-     * 
+     *
      * @param eventLog 事件日志
      * @return 结果
      */
@@ -45,7 +48,7 @@ public interface EventLogMapper
 
     /**
      * 删除事件日志
-     * 
+     *
      * @param id 事件日志ID
      * @return 结果
      */
@@ -53,7 +56,7 @@ public interface EventLogMapper
 
     /**
      * 批量删除事件日志
-     * 
+     *
      * @param ids 需要删除的数据ID
      * @return 结果
      */
