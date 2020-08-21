@@ -26,7 +26,7 @@ import eu.bitwalker.useragentutils.UserAgent;
 
 /**
  * 异步工厂（产生任务用）
- * 
+ *
  * @author liuhulu
  *
  */
@@ -36,7 +36,7 @@ public class AsyncFactory
 
     /**
      * 同步session到数据库
-     * 
+     *
      * @param session 在线用户会话
      * @return 任务task
      */
@@ -67,7 +67,7 @@ public class AsyncFactory
 
     /**
      * 操作日志记录
-     * 
+     *
      * @param operLog 操作日志信息
      * @return 任务task
      */
@@ -87,7 +87,7 @@ public class AsyncFactory
 
     /**
      * 记录登陆信息
-     * 
+     *
      * @param username 用户名
      * @param status 状态
      * @param message 消息
@@ -172,7 +172,7 @@ public class AsyncFactory
                 for(File f:files){
                     //通过文件名称判断日期如 ry_2019_10_19_11_34_943.sql
                     name=f.getName();
-                    name=name.replace("ry_","");
+                    name=name.replace("ruoyi_","");
                     name=name.substring(0,10);
                     name=name.replace("_","-");
                     Date date=DateUtils.parseDate(name);

@@ -63,7 +63,7 @@ public class BackupController extends BaseController {
                 temp.put("rowNum", i);
                 name = s;
                 temp.put("name", name);
-                name = name.replace("ry_plus_", "");
+                name = name.replace("ruoyi_plus_", "");
                 hourSeconds = name.substring(11, 19);
                 hourSeconds = hourSeconds.replace("_", ":");
                 name = name.substring(0, 10);
