@@ -6,7 +6,7 @@
 	<th:block th:include="include :: header('文件管理')" />
 </head>
 <body class="gray-bg">
-	
+
 	<div class="container-div">
 		<div class="row">
 			<div class="col-sm-12 search-collapse">
@@ -30,7 +30,7 @@
 					</div>
 				</form>
 			</div>
-			
+
 	       <div class="btn-group-sm hidden-xs" id="toolbar" role="group">
 	            <a class="btn btn-success" id="upload" shiro:hasPermission="system:dict:add">
 	                <i class="fa fa-plus"></i> 上传
@@ -45,12 +45,13 @@
 		            <i class="fa fa-image"></i> 结合editor
 		        </a>
 	        </div>
-	        
+
 	        <div class="col-sm-12 select-table table-striped">
 			    <table id="bootstrap-table" data-mobile-responsive="true"></table>
 			</div>
 		</div>
 	</div>
+
 	<div th:include="include :: footer"></div>
 	<script th:src="@{/ajax/libs/ajaxfile/ajaxupload.js}"></script>
 	<script th:inline="javascript">
@@ -93,7 +94,7 @@
 		                    return s;
 		                },
 		                events: 'operateEvents'
-						
+
 					},
 					{
 						field: 'createTime',
@@ -132,7 +133,7 @@
 				};
 			$.table.init(options);
 		});
-		
+
 		function queryParams(params) {
 			return {
 				dictType:       $("#dictType").val(),
@@ -143,18 +144,18 @@
     			isAsc:          params.order
 			};
 		}
-		
+
 		function ossfig() {
 			var url = prefix+'/config';
 			$.modal.open("云储存配置", url);
 		}
-		
+
 		function osseditor() {
 			var url = prefix+'/editor';
 			$.modal.open("结合editor", url,"1000");
 		}
-		
-		
+
+
 		new AjaxUpload('#upload', {
 	        action: prefix+"/upload",
 	        name: 'file',
